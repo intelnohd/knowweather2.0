@@ -1,0 +1,199 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Фон с градиентом */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* Чтобы убрать скролл */
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Тень для глубины */
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-out; /* Анимация появления */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    font-size: 50px;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #1e90ff, #00bfff, #87cefa); /* Яркие оттенки синего */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    letter-spacing: 2px;
+    display: inline-block;
+    animation: brightnessShift 3s ease infinite; /* Анимация яркости */
+    text-align: center;
+}
+
+@keyframes brightnessShift {
+    0% {
+        filter: brightness(100%);
+    }
+    50% {
+        filter: brightness(120%);
+    }
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+body {
+    background: linear-gradient(180deg, #e0f7fa, #80deea); /* Фон с мягким градиентом для контраста с логотипом */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+
+.textw {
+    color: #2b7cbf;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 2px solid #4e99e9;
+    border-radius: 25px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #2b7cbf;
+    box-shadow: 0 0 10px rgba(43, 124, 191, 0.5); /* Анимация при фокусе */
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #74ebd5, #2b7cbf);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #2b7cbf, #74ebd5);
+    transform: scale(1.05); /* Легкая анимация увеличения при наведении */
+}
+
+button:active {
+    transform: scale(0.98); /* Эффект нажатия */
+}
+
+.pinned-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.pinned-card {
+    background: linear-gradient(135deg, #e0f7fa, #74ebd5);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    animation: slideIn 0.5s ease-out; /* Анимация появления карточки */
+    position: relative;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.removeWeather {
+    position: absolute;
+    top: 145px;
+    right: 0px;
+    background: #ff5252;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.removeWeather:hover {
+    background: #ff1744;
+}
+
+.removeWeather:active {
+    transform: scale(0.95);
+}
+
+/* Мобильные адаптивные стили */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 40px;
+    }
+
+    .textw {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .pinned-card {
+        font-size: 14px;
+    }
+
+    .removeWeather {
+        font-size: 12px;
+        top: 130px;
+        right: 0px;
+    }
+}
